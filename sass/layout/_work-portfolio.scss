@@ -1,0 +1,94 @@
+.portfolio-work {
+    text-decoration: none;
+    margin-top: 0;
+    display: flex;
+    flex-wrap: wrap;
+}
+.portfolio-work__card {
+    width: calc((100% - 60px) / 3);   
+    box-sizing: border-box;
+    margin-right: 30px;
+    margin-bottom: 30px;
+
+    &:nth-child(3n) {
+    margin-right: 0;
+    }
+
+    &:nth-last-child(-n + 3) {
+    margin-bottom: 0;   
+    }
+}
+
+.portfolio-work__link {
+    text-decoration: none;
+    display: block;
+    transition: box-shadow var(--timer) var(--cubic-bezier);
+    border-radius: 4px;
+
+    &:focus .portfolio-work__overlay,
+    &:hover .portfolio-work__overlay {
+    transform: translatey(0);
+    }
+
+    &:hover,
+    &:focus{
+    box-shadow: 0px 3px 1px var(--close-btn), 0px 1px 2px var(--current-active-box-shadow), 0px 2px 2px --modal-box-shadow;
+    }
+}
+
+.portfolio-work__card-overlay {
+    position: relative;
+    overflow: hidden;
+}
+
+.portfolio-work__img {
+    margin-top: 0;
+    display: block;
+    max-width: 100%;
+    height: auto;
+}
+.portfolio-work__overlay {
+    background: rgba(33, 150, 243, 0.9);
+    display: flex;
+    align-items: center;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    transform: translateY(101%);
+    transition: transform var(--timer) var(--cubic-bezier);
+}
+
+.portfolio-work__overlay-text {
+    color: var(--additional-white-color);
+    @include font(500, 18px, 1.6, 0.03em);
+    padding-top: 63px;
+    padding-bottom: 63px;
+    padding-right: 24px;
+    padding-left: 24px;
+    margin: 0;
+} 
+    
+.portfolio-work__card-container {
+    padding-top: 20px;
+    padding-bottom: 20px;
+    padding-left: 24px;
+    padding-right: 24px; 
+    border-left: 1px solid var(--bgc-work-card );
+    border-right: 1px solid var(--bgc-work-card );
+    border-bottom: 1px solid var(--bgc-work-card );
+}
+
+.portfolio-work__title {
+    @include font(700, 18px, 2, 0.06em);
+    color: var(--title-text-color);
+    margin-top: 0;
+    margin-bottom: 4px; 
+}
+
+.portfolio-work__paragraph {
+    @include font(500, 16px, 1.9, 0.03em);
+    color: var(--additional-color);
+    margin-top: 0;
+    margin-bottom: 0;
+}

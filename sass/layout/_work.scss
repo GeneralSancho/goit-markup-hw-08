@@ -1,0 +1,46 @@
+.work__action-block {
+    position: relative;
+    line-height: 0;
+}
+
+.work__action-line {
+    width: 100%;
+    height: 70px;
+    background: var(--work-action-line);
+    position: absolute;
+    @extend %align-center;
+    bottom: 0;
+    right: 0;
+
+}
+
+.work__action-line-title {
+    @include font(700, 14px, 1.14, 0.03em);
+    text-align: center;
+    text-transform: uppercase;
+    margin: 0;
+    color: var(--additional-white-color);
+}
+.section__title {
+    @include font(700, 36px, 1.17, 0.03em);
+    text-align: center;
+    color: var(--title-text-color);
+    margin-top: 0;
+    margin-bottom: 50px;
+}
+
+.work {
+    display: flex;
+
+    & .work__img {
+    margin-top: 0;
+    margin-bottom: 0;
+    display: block;
+    max-width: 100%;
+    height: auto;
+
+        & + .work__img {
+    margin-left: 30px;
+}
+    }
+}

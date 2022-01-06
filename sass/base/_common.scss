@@ -1,0 +1,35 @@
+body {
+    background-color: var(--additional-white-color);
+    color: var(--primary-text-color);
+    font-family: 'Roboto', sans-serif;
+    letter-spacing: 0.03em;
+}
+
+.list {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+
+.link {
+    text-decoration: none;
+    color: var(--title-text-color);
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 1.14;
+    letter-spacing: 0.02em;
+    display: block;
+    padding-top: 32px;
+    padding-bottom: 32px;
+    position: relative;
+    transition: color var(--timer) var(--cubic-bezier);
+}
+
+.decoration {
+    display: flex;
+    align-items: baseline;
+}
+
+.pointer {
+  cursor: pointer;
+}

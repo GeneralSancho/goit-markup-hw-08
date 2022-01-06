@@ -1,0 +1,37 @@
+.clients__block {
+    display: flex;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    justify-content: space-between;
+}
+.clients__list {
+
+    margin-right: 30px;
+    width: 170px;
+    height: 92px;
+
+    &:last-child {
+    margin-right: 0;
+    } 
+}
+.clients__icon {
+    fill: currentColor;
+}
+.clients__link {
+    width: 170px;
+    height: 92px;   
+    @extend %align-center;
+    border: 1px solid var(--client-color);
+    box-sizing: border-box;
+    border-radius: 4px;
+    color: var(--client-color);
+    transition: color var(--timer) var(--cubic-bezier),
+    border-color var(--timer) var(--cubic-bezier);
+    
+    &:hover,
+    &:focus{
+    border-color: var(--accent-color);
+    color: var(--accent-color);
+    }
+}
