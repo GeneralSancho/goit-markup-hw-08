@@ -108,7 +108,7 @@
                                             <span class="modal-form__field-name">Имя</span> 
 
                                             <div class="modal-form__block"> 
-                                                <input type="text" name="name" id="name" />
+                                                <input class="modal-form__input" type="text" name="name" id="name" />
                                                 <svg class="form-img" width="12" height="12"> 
                                                     <use href="./images/symbol.svg#icon-name"></use>
                                                 </svg>
@@ -119,7 +119,7 @@
                                             <span class="modal-form__field-name">Телефон</span> 
 
                                             <div class="modal-form__block">
-                                                <input type="tel" name="number" id="number"/>
+                                                <input class="modal-form__input" type="tel" name="number" id="number"/>
                                                 <svg class="form-img" width="13" height="13"> 
                                                     <use href="./images/symbol.svg#icon-number"></use>
                                                 </svg>
@@ -130,7 +130,7 @@
                                             <span class="modal-form__field-name">Почта</span> 
 
                                             <div class="modal-form__block">
-                                                <input type="mail" name="mail" id="mail" />
+                                                <input class="modal-form__input" type="mail" name="mail" id="mail" />
                                                 <svg class="form-img" width="15" height="12"> 
                                                     <use href="./images/symbol.svg#icon-mail"></use>
                                                 </svg>
@@ -157,7 +157,7 @@
                                                     <a href="" class="modal-form__checkbox-link">Условия договора</a></span>
                                         </label>
 
-                                        <button type="submit" class="button pointer">Отправить</button>
+                                        <button type="submit" class="modal-form__btn pointer">Отправить</button>
 
                                     </form>            
                                               
@@ -260,10 +260,29 @@
 <!-- Команда -->
             <section class="section-team">
                 <div class="container">
-                    <h2 class="section__title">Наша команда</h2>
+                    <h2 class="section-team__title">Наша команда</h2>
                     <ul class="team list">
                         <li class="team__card">
-                            <img src="./images/igor.jpg" alt="Игорь Демьяненко" width="270" class="team__img">
+                            <picture>
+                                <source srcset="
+                                ./images/team/person1-desk-1x.jpg 1x, 
+                                ./images/team/person1-desk-2x.jpg 2x"
+                                media="(min-width:1200px)"
+                                />
+                                <source srcset="
+                                ./images/team/person1-tab-1x.jpg 1x, 
+                                ./images/team/person1-tab-2x.jpg 2x" 
+                                media="(min-width:768px)" />
+                                <source srcset="
+                                ./images/team/person1-mob-1x.jpg 1x, 
+                                ./images/team/person1-mob-2x.jpg 2x" 
+                                media="(min-width:320px)" />
+                                <img 
+                                src="./images/team/person1-desk-1x.jpg" 
+                                alt="первый член команды" 
+                                >
+                            </picture>
+                            <!-- <img src="./images/igor.jpg" alt="Игорь Демьяненко" width="270" class="team__img"> -->
                             <div class="team__container">
                                 <h3 class="title">Игорь Демьяненко</h3>
                                 <p lang="en" class="team__position-title">Product Designer</p>
@@ -294,7 +313,19 @@
   
                         </li>
                         <li class="team__card">
-                            <img src="./images/olga.jpg" alt="Ольга Репина" width="270" class="team__img">
+                            <picture>
+                                <source srcset="
+                                ./images/team/person2-desk-1x.jpg 1x, 
+                                ./images/team/person2-desk-2x.jpg 2x" media="(min-width:1200px)" />
+                                <source srcset="
+                                ./images/team/person2-tab-1x.jpg 1x, 
+                                ./images/team/person2-tab-2x.jpg 2x" media="(min-width:768px)" />
+                                <source srcset="
+                                ./images/team/person2-mob-1x.jpg 1x, 
+                                ./images/team/person2-mob-2x.jpg 2x" media="(min-width:320px)" />
+                                <img src="./images/team/person2-desk-1x.jpg" alt="второй член команды">
+                            </picture>
+                            <!-- <img src="./images/olga.jpg" alt="Ольга Репина" width="270" class="team__img"> -->
                             <div class="team__container">
                                 <h3 class="title">Ольга Репина</h3>
                                 <p lang="en" class="team__position-title">Frontend Developer</p>
@@ -324,7 +355,19 @@
                             </div>
                         </li>
                         <li class="team__card">
-                            <img src="./images/nikolai.jpg" alt="Николай Тарасов" width="270" class="team__img">
+                            <picture>
+                                <source srcset="
+                                ./images/team/person3-desk-1x.jpg 1x, 
+                                ./images/team/person3-desk-2x.jpg 2x" media="(min-width:1200px)" />
+                                <source srcset="
+                                ./images/team/person3-tab-1x.jpg 1x, 
+                                ./images/team/person3-tab-2x.jpg 2x" media="(min-width:768px)" />
+                                <source srcset="
+                                ./images/team/person3-mob-1x.jpg 1x, 
+                                ./images/team/person3-mob-2x.jpg 2x" media="(min-width:320px)" />
+                                <img src="./images/team/person3-desk-1x.jpg" alt="третий член команды">
+                            </picture>
+                            <!-- <img src="./images/nikolai.jpg" alt="Николай Тарасов" width="270" class="team__img"> -->
                             <div class="team__container">
                                 <h3 class="title">Николай Тарасов</h3>
                                 <p lang="en" class="team__position-title">Marketing</p>
@@ -354,7 +397,19 @@
                             </div>    
                         </li>
                         <li class="team__card">
-                            <img src="./images/mikhail.jpg" alt="Михаил Ермаков" width="270" class="team__img">
+                            <picture>
+                                <source srcset="
+                                ./images/team/person4-desk-1x.jpg 1x, 
+                                ./images/team/person4-desk-2x.jpg 2x" media="(min-width:1200px)" />
+                                <source srcset="
+                                ./images/team/person4-tab-1x.jpg 1x, 
+                                ./images/team/person4-tab-2x.jpg 2x" media="(min-width:768px)" />
+                                <source srcset="
+                                ./images/team/person4-mob-1x.jpg 1x, 
+                                ./images/team/person4-mob-2x.jpg 2x" media="(min-width:320px)" />
+                                <img src="./images/team/person4-desk-1x.jpg" alt="четвертый член команды">
+                            </picture>
+                            <!-- <img src="./images/mikhail.jpg" alt="Михаил Ермаков" width="270" class="team__img"> -->
                             <div class="team__container">                           
                                 <h3 class="title">Михаил Ермаков</h3>
                                 <p lang="en" class="team__position-title">UI Designer</p>
@@ -499,6 +554,7 @@
                             <use href="./images/symbol.svg#icon-send"></use>
                         </svg>
                     </button>
+                    
                 </form>
             </div>
         </div>

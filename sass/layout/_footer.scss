@@ -53,7 +53,7 @@
     margin-top: 0;
     margin-bottom: 8px;
     font-style: normal;
-  @media screen and (min-width: $desktop) {
+    @media screen and (min-width: $desktop) {
     margin-bottom: 9px;
   }
 }
@@ -142,7 +142,9 @@
   @media screen and (min-width: $desktop) {
     margin-left: auto;
   }
-
+@media screen and (max-width: 1199px) {
+    justify-content: center;
+}
 }
 
 .footer-subscribe__title {
@@ -160,7 +162,7 @@
 }
 
 .footer-subscribe__form {
-@media screen and (max-width: 1199px) {
+  @media screen and (max-width: 1199px) {
     max-width: 450px;
     margin: 0 auto;
   }
@@ -180,24 +182,24 @@
     border-radius: 4px;
     outline: none;
     background-color: transparent;
-    margin-right: 12px;
+    // margin-right: 12px;
 
     height: 50px;
     padding-left: 16px;
     color: var(--additional-white-color);
     @include font(500, 16px, 1.25, 0.03em);
     transition: border var(--timer) var(--cubic-bezier);
-  @media screen and (min-width: $mobile) {
-    width: 450px;
-  }
-  @media screen and (max-width: 1199px) {
-    margin-bottom: 20px;
-    
-  }
-  @media screen and (min-width: $desktop) {
-    width: 358px;
-    margin-right: 12px;
-  }
+    @media screen and (min-width: $mobile) {
+      width: 450px;
+    }
+    @media screen and (max-width: 1199px) {
+      margin-bottom: 20px;
+      
+    }
+    @media screen and (min-width: $desktop) {
+      width: 358px;
+      margin-right: 12px;
+    }
     &:focus {
     border: 1px solid var(--additional-white-color);
     }
@@ -218,10 +220,12 @@
     width: 200px;
     height: 50px;
     margin-bottom: 0;
-    @extend %align-center;
+    justify-content: center;
+    align-items: center;
+
     cursor: pointer;
     font-family: Roboto;
-     @include font(700, 16px, 1.9, 0.06em);
+    @include font(700, 16px, 1.9, 0.06em);
     box-shadow: 0px 4px 4px var(--box-shadow);
     transition: background-color var(--timer) var(--cubic-bezier);  
 

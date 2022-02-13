@@ -22,28 +22,30 @@
 }
 
 .modal {
-    min-height: 581px;
-    min-width: 528px;
+
     background-color: var(--additional-white-color);
     position: absolute;
     top: 50%;
     left: 50%;
-    transform: translate(-50%, -50%);
+
     height: 98%;
     width: 96%;
-      height: 635px;
+    height: 635px;
+    padding: 40px;
+
     box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
     border-radius: 4px;
-    padding: 40px;
-     @media screen and (min-width: $mobile) {
-    width: 450px;
-    height: 609px;
+    transform: scale(1) translate(-50%, -50%);
+    
+    @media screen and (min-width: 480px) {
+        width: 450px;
+        height: 609px;
     }
 
-    transform: scale(1) translate(-50%, -50%);
-    @media screen and (min-width: $tablet) {
+    @media screen and (min-width: 768px) {
+
     }
-    @media screen and (min-width: $desktop) {
+    @media screen and (min-width: 1200px) {
         width: 528px;
         height: 581px;
     }
@@ -70,6 +72,7 @@
 
     &:focus {
         color:var(--accent-color);
+        outline: 1px solid var(--accent-color);
     }
     &:hover{
         color:var(--accent-color);
@@ -79,18 +82,27 @@
 /* form */
 
 .modal-form {
-    width: 448px;
+    width: auto;
     position: relative;
 }
 
 .modal-form__title {
-    font-weight: bold;
-    font-size: 20px;
-    line-height: 1.15;
-    letter-spacing: 0.03em;
-    color: var(--title-text-color);
-    margin-top: 0;
     margin-bottom: 12px;
+    font-weight: 700;
+    line-height: 1.5;
+    letter-spacing: 0.03em;
+    text-align: center;
+    color: var(--title-text-color);
+
+    @media screen and (min-width: 480px) {
+    font-size: 20px;
+    }
+    @media screen and (max-width: 1199px) {
+        height: 60px;
+    }
+    @media screen and (min-width: 1200px) {
+        line-height: 1.15;
+    }
 }
 
 .modal-form__field {
@@ -107,10 +119,16 @@
     line-height: 1.17;
     letter-spacing: 0.01em;
     margin-bottom: 4px;
+
+    color: var(--additional-color);
+    transition: border-color var(--timer) var(--cubic-bezier),
+    color var(--timer) var(--cubic-bezier);
+    cursor: pointer;
 }
 
 .modal-form__block {
     display: flex;
+    
     margin-bottom: 10px;
     justify-content:center;
     position: relative;
@@ -150,6 +168,8 @@
 
 }
 
+
+
 /* comment */
 
 .modal-form__comment {
@@ -160,7 +180,7 @@
 
     & .modal-form__textarea {
     display: block;
-    width: 448px;
+    width: auto;
     height: 120px;
     padding: 12px 16px;
     border: 1px solid rgba(33, 33, 33, 0.2);
@@ -194,6 +214,7 @@
     display: flex;
     margin-bottom: 30px;
     justify-content:center;
+    text-align: left;
     
 }
 
@@ -226,17 +247,27 @@
 
 .modal-form__checkbox-text{
     font-weight: normal;
-    font-size: 14px;
-    line-height: 1.71;
+
+    line-height: 1.17;
     letter-spacing: 0.03em;
     color: var(--additional-color);
+    @media screen and (min-width: 480px) {
+    font-size: 12px;
+    }
+    @media screen and (min-width: 1200px) {
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 1.71;
+        letter-spacing: 0.03em;
+    }
+        
 }
 
 .modal-form__checkbox-link{
     font-weight: normal;
-    font-size: 14px;
-    line-height: 1.71;
-    margin-left: 4px;
+    font-size: 12px;
+    line-height: 1.17;
+    // margin-left: 4px;
     letter-spacing: 0.03em;
     text-decoration-line: underline;
     color: var(--accent-color);
@@ -246,5 +277,46 @@
     &:focus{
     outline: 2px solid var(--accent-color);
 
+    }
+ @media screen and (min-width: 1200px) {
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 1.71;
+    letter-spacing: 0.03em;
+  }
 }
+
+.modal-form__btn {
+  width: 200px;
+  height: 50px;
+  margin: 0px auto;
+  padding: 0px;
+  display: flex;
+
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 1.86;
+
+  align-items: center;
+  justify-content: center;
+  letter-spacing: 0.06em;
+
+  color: var(--additional-white-color);
+  background-color: var(--accent-color);
+  border: none;
+  box-shadow: var(--box-shadow);
+  border-radius: 4px;
+
+  transition: background-color 250ms var(--cubic-bezier);
+  cursor: pointer;
+
+  &:focus {
+    box-shadow: 0px 4px 4px var(--box-shadow);
+    background-color: var(--button-hover);
+  }
+  &:hover {
+    box-shadow: 0px 4px 4px var(--box-shadow);
+    background-color: var(--button-hover);
+  }
+
 }

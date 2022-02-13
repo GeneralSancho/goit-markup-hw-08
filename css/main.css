@@ -59,7 +59,7 @@ img {
   margin: -1px;
 }
 
-.modal-form__check, .features__icon-block, .work__action-line, .team__social-link, .clients__link, .footer-social__link, .footer-subscribe__form-button {
+.modal-form__check, .features__icon-block, .work__action-line, .team__social-link, .clients__link, .footer-social__link {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -144,21 +144,33 @@ img {
 }
 
 .modal {
-  min-height: 581px;
-  min-width: 528px;
   background-color: var(--additional-white-color);
   position: absolute;
   top: 50%;
   left: 50%;
-  -webkit-transform: translate(-50%, -50%);
-          transform: translate(-50%, -50%);
   height: 98%;
   width: 96%;
   height: 635px;
+  padding: 40px;
   -webkit-box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
           box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
   border-radius: 4px;
-  padding: 40px;
+  -webkit-transform: scale(1) translate(-50%, -50%);
+          transform: scale(1) translate(-50%, -50%);
+}
+
+@media screen and (min-width: 480px) {
+  .modal {
+    width: 450px;
+    height: 609px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .modal {
+    width: 528px;
+    height: 581px;
+  }
 }
 
 .close {
@@ -190,6 +202,7 @@ img {
 
 .close-btn:focus {
   color: var(--accent-color);
+  outline: 1px solid var(--accent-color);
 }
 
 .close-btn:hover {
@@ -198,18 +211,35 @@ img {
 
 /* form */
 .modal-form {
-  width: 448px;
+  width: auto;
   position: relative;
 }
 
 .modal-form__title {
-  font-weight: bold;
-  font-size: 20px;
-  line-height: 1.15;
-  letter-spacing: 0.03em;
-  color: var(--title-text-color);
-  margin-top: 0;
   margin-bottom: 12px;
+  font-weight: 700;
+  line-height: 1.5;
+  letter-spacing: 0.03em;
+  text-align: center;
+  color: var(--title-text-color);
+}
+
+@media screen and (min-width: 480px) {
+  .modal-form__title {
+    font-size: 20px;
+  }
+}
+
+@media screen and (max-width: 1199px) {
+  .modal-form__title {
+    height: 60px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .modal-form__title {
+    line-height: 1.15;
+  }
 }
 
 .modal-form__field {
@@ -231,6 +261,10 @@ img {
   line-height: 1.17;
   letter-spacing: 0.01em;
   margin-bottom: 4px;
+  color: var(--additional-color);
+  -webkit-transition: border-color var(--timer) var(--cubic-bezier), color var(--timer) var(--cubic-bezier);
+  transition: border-color var(--timer) var(--cubic-bezier), color var(--timer) var(--cubic-bezier);
+  cursor: pointer;
 }
 
 .modal-form__block {
@@ -292,7 +326,7 @@ img {
 
 .modal-form__comment .modal-form__textarea {
   display: block;
-  width: 448px;
+  width: auto;
   height: 120px;
   padding: 12px 16px;
   border: 1px solid rgba(33, 33, 33, 0.2);
@@ -353,6 +387,7 @@ img {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  text-align: left;
 }
 
 .modal-form__check {
@@ -384,17 +419,30 @@ img {
 
 .modal-form__checkbox-text {
   font-weight: normal;
-  font-size: 14px;
-  line-height: 1.71;
+  line-height: 1.17;
   letter-spacing: 0.03em;
   color: var(--additional-color);
 }
 
+@media screen and (min-width: 480px) {
+  .modal-form__checkbox-text {
+    font-size: 12px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .modal-form__checkbox-text {
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 1.71;
+    letter-spacing: 0.03em;
+  }
+}
+
 .modal-form__checkbox-link {
   font-weight: normal;
-  font-size: 14px;
-  line-height: 1.71;
-  margin-left: 4px;
+  font-size: 12px;
+  line-height: 1.17;
   letter-spacing: 0.03em;
   -webkit-text-decoration-line: underline;
           text-decoration-line: underline;
@@ -406,6 +454,56 @@ img {
 
 .modal-form__checkbox-link:focus {
   outline: 2px solid var(--accent-color);
+}
+
+@media screen and (min-width: 1200px) {
+  .modal-form__checkbox-link {
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 1.71;
+    letter-spacing: 0.03em;
+  }
+}
+
+.modal-form__btn {
+  width: 200px;
+  height: 50px;
+  margin: 0px auto;
+  padding: 0px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 1.86;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  letter-spacing: 0.06em;
+  color: var(--additional-white-color);
+  background-color: var(--accent-color);
+  border: none;
+  -webkit-box-shadow: var(--box-shadow);
+          box-shadow: var(--box-shadow);
+  border-radius: 4px;
+  -webkit-transition: background-color 250ms var(--cubic-bezier);
+  transition: background-color 250ms var(--cubic-bezier);
+  cursor: pointer;
+}
+
+.modal-form__btn:focus {
+  -webkit-box-shadow: 0px 4px 4px var(--box-shadow);
+          box-shadow: 0px 4px 4px var(--box-shadow);
+  background-color: var(--button-hover);
+}
+
+.modal-form__btn:hover {
+  -webkit-box-shadow: 0px 4px 4px var(--box-shadow);
+          box-shadow: 0px 4px 4px var(--box-shadow);
+  background-color: var(--button-hover);
 }
 
 .section {
@@ -1183,10 +1281,25 @@ img {
   text-align: center;
 }
 
-.title {
-  margin-top: 0;
-  margin-bottom: 10px;
+.section-team__title {
+  margin-bottom: 30px;
+  font-weight: 700;
+  font-size: 28px;
+  line-height: 1.17;
+  letter-spacing: 0.03em;
+  font-style: normal;
   text-align: center;
+  color: var(--title-text-color);
+}
+
+@media screen and (min-width: 1200px) {
+  .section-team__title {
+    margin-bottom: 50px;
+    font-weight: 700;
+    font-size: 36px;
+    line-height: 1.17;
+    letter-spacing: 0.03em;
+  }
 }
 
 @media screen and (min-width: 768px) {
@@ -1574,6 +1687,14 @@ img {
   }
 }
 
+@media screen and (max-width: 1199px) {
+  .footer-subscribe {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+}
+
 .footer-subscribe__title {
   margin-bottom: 20px;
   display: -webkit-box;
@@ -1625,7 +1746,6 @@ img {
   border-radius: 4px;
   outline: none;
   background-color: transparent;
-  margin-right: 12px;
   height: 50px;
   padding-left: 16px;
   color: var(--additional-white-color);
@@ -1727,6 +1847,12 @@ img {
   width: 200px;
   height: 50px;
   margin-bottom: 0;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   cursor: pointer;
   font-family: Roboto;
   font-weight: 700;
