@@ -52,7 +52,7 @@
     @include font(500, 14px, 1.71, 0.03em);
     margin-top: 0;
     margin-bottom: 8px;
-
+    font-style: normal;
   @media screen and (min-width: $desktop) {
     margin-bottom: 9px;
   }
@@ -142,6 +142,7 @@
   @media screen and (min-width: $desktop) {
     margin-left: auto;
   }
+
 }
 
 .footer-subscribe__title {
@@ -151,6 +152,11 @@
     @include font(700, 14px, 1.14, 0.03em);
     text-transform: uppercase;
     color: var(--additional-white-color);
+    
+    @media screen and (max-width: 1199px) {
+    justify-content: center;
+    display: flex;
+}
 }
 
 .footer-subscribe__form {
@@ -175,32 +181,32 @@
     outline: none;
     background-color: transparent;
     margin-right: 12px;
-    width: 358px;
+
     height: 50px;
     padding-left: 16px;
     color: var(--additional-white-color);
     @include font(500, 16px, 1.25, 0.03em);
     transition: border var(--timer) var(--cubic-bezier);
-
-    &:focus {
-    border: 1px solid var(--additional-white-color);
-    }
-
-    &::placeholder {
   @media screen and (min-width: $mobile) {
     width: 450px;
   }
   @media screen and (max-width: 1199px) {
     margin-bottom: 20px;
+    
   }
   @media screen and (min-width: $desktop) {
     width: 358px;
     margin-right: 12px;
   }
+    &:focus {
+    border: 1px solid var(--additional-white-color);
+    }
 
+    &::placeholder {
     color: var(--subscribe-input-placeholder);
     display: flex;
     align-items: center;
+    justify-content: center;
     @include font(500, 16px, 1.25, 0.03em);
     }
 }
@@ -218,7 +224,12 @@
      @include font(700, 16px, 1.9, 0.06em);
     box-shadow: 0px 4px 4px var(--box-shadow);
     transition: background-color var(--timer) var(--cubic-bezier);  
+
+    @media screen and (min-width: $desktop) {
+    display: flex;
     
+    
+  }
     &:focus,
     &:hover {
     background-color: var(--button-hover);
