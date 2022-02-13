@@ -708,8 +708,8 @@ img {
   line-height: 1.14;
   letter-spacing: 0.02em;
   color: var(--additional-color);
-  -webkit-transition: color var(--cubic-bezier);
-  transition: color var(--cubic-bezier);
+  -webkit-transition: color var(--timer) var(--cubic-bezier);
+  transition: color var(--timer) var(--cubic-bezier);
 }
 
 .header-contacts__link:hover, .header-contacts__link:focus {
@@ -782,8 +782,8 @@ img {
   line-height: 1.14;
   letter-spacing: 0.02em;
   color: var(--additional-color);
-  -webkit-transition: color var(--cubic-bezier);
-  transition: color var(--cubic-bezier);
+  -webkit-transition: color var(--timer) var(--cubic-bezier);
+  transition: color var(--timer) var(--cubic-bezier);
 }
 
 .contact-nav__link:hover, .contact-nav__link:focus {
@@ -828,8 +828,8 @@ img {
   padding: 0;
   border: none;
   background-color: transparent;
-  -webkit-transition: fill var(--cubic-bezier);
-  transition: fill var(--cubic-bezier);
+  -webkit-transition: fill var(--timer) var(--cubic-bezier);
+  transition: fill var(--timer) var(--cubic-bezier);
 }
 
 @media screen and (min-width: 768px) {
@@ -850,8 +850,8 @@ img {
   top: 0;
   z-index: 5;
   padding: 48px 40px;
-  -webkit-transition: opacity 600ms var(--cubic-bezier), visibility 600ms var(--cubic-bezier);
-  transition: opacity 600ms var(--cubic-bezier), visibility 600ms var(--cubic-bezier);
+  -webkit-transition: opacity 600ms var(--timer) var(--cubic-bezier), visibility 600ms var(--timer) var(--cubic-bezier);
+  transition: opacity 600ms var(--timer) var(--cubic-bezier), visibility 600ms var(--timer) var(--cubic-bezier);
 }
 
 .mob-menu.is-hidden {
@@ -908,8 +908,8 @@ img {
   padding: 0;
   border: none;
   background-color: transparent;
-  -webkit-transition: color var(--cubic-bezier);
-  transition: color var(--cubic-bezier);
+  -webkit-transition: color var(--timer) var(--cubic-bezier);
+  transition: color var(--timer) var(--cubic-bezier);
 }
 
 .header-btn-cross:focus, .header-btn-cross:hover {
@@ -922,8 +922,8 @@ img {
   font-size: 40px;
   line-height: calc(47 / 40);
   letter-spacing: 0.02em;
-  -webkit-transition: color var(--cubic-bezier);
-  transition: color var(--cubic-bezier);
+  -webkit-transition: color var(--timer) var(--cubic-bezier);
+  transition: color var(--timer) var(--cubic-bezier);
   text-decoration: none;
   color: var(--title-text-color);
 }
@@ -955,8 +955,8 @@ img {
   line-height: calc(40 / 34);
   letter-spacing: 0.02em;
   color: var(--additional-color);
-  -webkit-transition: color var(--cubic-bezier);
-  transition: color var(--cubic-bezier);
+  -webkit-transition: color var(--timer) var(--cubic-bezier);
+  transition: color var(--timer) var(--cubic-bezier);
   text-decoration: none;
 }
 
@@ -979,8 +979,8 @@ img {
   font-size: 6vw;
   line-height: calc(28 / 24);
   letter-spacing: 0.02em;
-  -webkit-transition: color var(--cubic-bezier);
-  transition: color var(--cubic-bezier);
+  -webkit-transition: color var(--timer) var(--cubic-bezier);
+  transition: color var(--timer) var(--cubic-bezier);
   text-decoration: none;
   color: var(--additional-color);
 }

@@ -5,13 +5,13 @@
     right: 0;
     border-bottom: 1px solid var(--header-border);
     background-color: var(--additional-white-color);
-        position: relative;
+    position: relative;
 }
 .logo {
     color: var(--title-text-color);
     text-decoration: none;
     font-family: 'Raleway', sans-serif;
-     @include font(700, 26px, 1.19, 0.03em);
+    @include font(700, 26px, 1.19, 0.03em);
     padding-top: 24px;
     padding-bottom: 24px;
 } 
@@ -87,7 +87,7 @@
 
   @include font(500, 14px, 1.14, 0.02em);
   color: var(--additional-color);
-  transition: color var(--cubic-bezier);
+  transition: color var(--timer) var(--cubic-bezier);
 
   &:hover,
   &:focus {
@@ -124,25 +124,6 @@
   }
 }
 
-
-
-
-
-
-
-
-// 
-
-// .contact-nav {
-//     display: flex;
-//     margin-left: auto;
-
-//     & .contact-nav__list + .contact-nav__list {
-//     margin-left: 50px;
-//     }
-
-// }
-
 .contact-nav__icon {
     width:16px;
     height: 16px;
@@ -160,31 +141,19 @@
 }
 
 .contact-nav__link {
-  //   color: var(--additional-color);
-  //   text-decoration: none;
-  //   @include font(500, 14px, 1.14, 0.02em);
-  //   padding-top: 32px;
-  //   padding-bottom: 32px;
-  //   // display: block;
-  //   transition: color var(--cubic-bezier);
-  // display: none;
-  // margin-left: auto;
-  //   &:hover, 
-  //   &:focus {
-  //   color:var(--accent-color);
-  //   }
-  display: flex;
-  
-  align-items: center;
-  text-decoration: none;
-  @include font(500, 14px, 1.14, 0.02em);
-  color: var(--additional-color);
-  transition: color var(--cubic-bezier);
 
-  &:hover,
-  &:focus {
-    color: var(--accent-color);
-  }
+    display: flex;
+    
+    align-items: center;
+    text-decoration: none;
+    @include font(500, 14px, 1.14, 0.02em);
+    color: var(--additional-color);
+    transition: color var(--timer) var(--cubic-bezier);
+
+    &:hover,
+    &:focus {
+      color: var(--accent-color);
+    }
 
   @media screen and (min-width: $tablet) {
     font-weight: 500;
@@ -222,7 +191,7 @@
     padding: 0;
     border: none;
     background-color: transparent;
-    transition: fill var(--cubic-bezier);
+    transition: fill var(--timer) var(--cubic-bezier);
 
     @media screen and (min-width: 768px) {
        display: none; 
@@ -234,17 +203,17 @@
 }
 
 .mob-menu {
-  position: fixed;
-  background-color: var(--additional-white-color);
-  width: 100vw;
-  height: 100vh;
-  top: 0;
-  z-index: 5;
-  padding: 48px 40px;
+    position: fixed;
+    background-color: var(--additional-white-color);
+    width: 100vw;
+    height: 100vh;
+    top: 0;
+    z-index: 5;
+    padding: 48px 40px;
   
 
-  transition: opacity 600ms var(--cubic-bezier),
-    visibility 600ms var(--cubic-bezier);
+    transition: opacity 600ms var(--timer) var(--cubic-bezier),
+    visibility 600ms var(--timer) var(--cubic-bezier);
 
   &.is-hidden {
     visibility: hidden;
@@ -272,19 +241,19 @@
 }
 
 .mob-menu-top {
-  margin-bottom: 32px;
+    margin-bottom: 32px;
 }
 .header-btn-cross {
-  position: absolute;
-  display: inline-flex;
-  right: 15px;
-  top: 10px;
-  margin: 0;
-  padding: 0;
+    position: absolute;
+    display: inline-flex;
+    right: 15px;
+    top: 10px;
+    margin: 0;
+    padding: 0;
 
-  border: none;
-  background-color: transparent;
-  transition: color var(--cubic-bezier);
+    border: none;
+    background-color: transparent;
+    transition: color var(--timer) var(--cubic-bezier);
 
   &:focus,
   &:hover {
@@ -293,12 +262,12 @@
 }
 
 .mob-menu__link {
-  font-family: Roboto;
-  @include font(500, 40px, calc(47 / 40), 0.02em);
-  transition: color var(--cubic-bezier);
-  text-decoration: none;
+    font-family: Roboto;
+    @include font(500, 40px, calc(47 / 40), 0.02em);
+    transition: color var(--timer) var(--cubic-bezier);
+    text-decoration: none;
 
-  color: var(--title-text-color);
+    color: var(--title-text-color);
   &:hover,
   &:focus {
     color: var(--accent-color);
@@ -321,7 +290,7 @@
   font-family: Roboto;
   @include font(500, 8vw, calc(40 / 34), 0.02em);
   color: var(--additional-color);
-  transition: color var(--cubic-bezier);
+  transition: color var(--timer) var(--cubic-bezier);
   text-decoration: none;
   &:hover,
   &:focus {
@@ -332,14 +301,14 @@
   }
 }
 .mob-menu-contacts-2__link {
-  font-family: Roboto;
-  @include font(500, 6vw, calc(28 / 24), 0.02em);
-  transition: color var(--cubic-bezier);
-  text-decoration: none;
-  color: var(--additional-color);
-  &:hover,
-  &:focus {
-    color: var(--accent-color);
+    font-family: Roboto;
+    @include font(500, 6vw, calc(28 / 24), 0.02em);
+    transition: color var(--timer) var(--cubic-bezier);
+    text-decoration: none;
+    color: var(--additional-color);
+    &:hover,
+    &:focus {
+      color: var(--accent-color);
   }
   @media screen and (min-width: $mobile) {
     @include font(500, 24px, calc(28 / 24), 0.02em);
@@ -347,8 +316,8 @@
 }
 // ------------
 .mob-menu-network {
-  display: flex;
-  flex-wrap: wrap;
+    display: flex;
+    flex-wrap: wrap;
 }
 .mob-menu-network__item {
   &:not(:last-child) {
@@ -366,44 +335,3 @@
 
   color: var(--accent-color);
 }
-
-
-
-// .menu-button .icon-close {
-//     display: none;
-// }
-
-// .menu-button.is-open .icon-close {
-//     display: block;
-// }
-
-// .menu-button.is-open .icon-menu {
-//     display: none;
-// }
-
-// .menu-container {
-
-    
-//     padding: 20px;
-//     text-align: center;
-//     font-size: 20px;
-//     background-color: red ;
-    
-
-//     @media screen and (max-width: 767px) {
-//     display: none;        
-//     position: absolute;
-//     top: 100%;
-//     left: 0;
-//     width: 100%;
-//     &.is-open {
-//         display: block;
-//         }
-//     }
-//     @media screen and (min-width: 768px) {
-//     display: flex;
-//     justify-content: space-between;
-//     flex-grow: 1;
-//         margin-left: auto;
-//     }
-// }
